@@ -49,14 +49,15 @@ class MainActivity : AppCompatActivity() {
         sharedViewModel = ViewModelProvider(  this@MainActivity, factory).get(PassViewModel::class.java)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
+
         initViews()
+
         sharedViewModel?.passes?.observe( this,  Observer {
             binding.recView.adapter =
                 MyRecAdapter(
                     sharedViewModel?.passes?.value ?: listOf()
-                )
+                ) { pass:Pass -> showPassListener(pass)}
         })
 
         binding.btnAdd.setOnClickListener(View.OnClickListener {
@@ -97,8 +98,14 @@ class MainActivity : AppCompatActivity() {
             ), Pass(0, "Пропуск в Урфу")
         )
         adapter =
-            MyRecAdapter(passesList = passesList)
+            MyRecAdapter(passesList) { pass:Pass -> showPassListener(pass)}
         binding.recView.layoutManager = LinearLayoutManager(applicationContext)
         binding.recView.adapter = adapter
+    }
+
+    fun showPassListener(pass:Pass){
+        val intent = Intent(this@MainActivity,ActivityPass::class.java)
+        intent.putExtra("name",pass.name)
+        startActivity(intent)
     }
 }

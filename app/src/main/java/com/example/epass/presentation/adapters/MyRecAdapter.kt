@@ -1,6 +1,7 @@
 package com.example.epass.presentation.adapters
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -8,7 +9,8 @@ import com.example.epass.R
 import com.example.epass.domain.Pass
 import com.example.epass.databinding.RecViewItemBinding
 
-class MyRecAdapter (private val passesList:List<Pass>?) :
+class MyRecAdapter (private val passesList:List<Pass>?,
+private val showListener:(Pass) -> Unit) :
     RecyclerView.Adapter<MyRecAdapter.ViewHolder>()
 {
 
@@ -30,6 +32,10 @@ class MyRecAdapter (private val passesList:List<Pass>?) :
            binding.cardview.setOnLongClickListener( View.OnLongClickListener {
                clickListener(habit!!)
            })*/
+           binding.cardview.setOnClickListener( View.OnClickListener {
+               // TODO:dangerous place
+               showListener(pass!!)
+           })
         }
     }
 

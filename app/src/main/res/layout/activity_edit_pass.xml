@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <data>
-        <variable
-            name="vm"
-            type="com.example.epass.presentation.viewmodels.AddViewModel" />
-    </data>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".presentation.ui.EditActivity">
+
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"
@@ -38,7 +38,7 @@
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Новый пропуск"
+                    android:text="Редактировать"
                     android:singleLine="true"
                     app:layout_constraintTop_toTopOf="@id/btn_ready"
                     app:layout_constraintBottom_toBottomOf="@id/btn_ready"
@@ -59,17 +59,6 @@
                     android:background="@drawable/ic_btn_ready"
                     app:layout_constraintRight_toRightOf="parent"
                     />
-                <!--<com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/top_bar"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:title="@string/my_passes"
-                    app:menu="@menu/main_menu"
-                    />-->
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -100,8 +89,22 @@
             android:layout_marginTop="18dp"
             android:textSize="18sp"
             android:textStyle="normal"
-            android:text="@={vm.n}"
             android:backgroundTint="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/delete_pass_button"
+            android:layout_width="152dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="85dp"
+            android:background="@drawable/delete_button"
+            android:text="@string/delete"
+            android:textColor="@color/text_black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
+

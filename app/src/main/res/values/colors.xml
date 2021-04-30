@@ -8,4 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#EF3124</color>
+
+
+    <color name="background">#F0F2F5</color>
+    <color name="pale_blue">#5C89F5</color>
+    <color name="pass_red">#EF3124</color>
+    <color name="text_black">#1A1A1A</color>
+    <color name="background_grey">#DDDDDD</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

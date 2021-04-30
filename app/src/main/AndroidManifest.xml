@@ -20,6 +20,12 @@
         <activity android:name=".presentation.ui.ActivityAddPass">
 
         </activity>
+
+        <activity android:name=".presentation.ui.ActivityPass">
+        </activity>
+
+        <activity android:name=".presentation.ui.EditActivity">
+        </activity>
     </application>
 
 </manifest>
