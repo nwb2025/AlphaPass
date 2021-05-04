@@ -9,7 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"
@@ -22,7 +23,9 @@
             app:elevation="0dp">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize">
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
 
                 <ImageButton
                     android:id="@+id/btn_back"
@@ -32,7 +35,6 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     android:background="@drawable/ic_back"
-                    android:layout_marginLeft="16dp"
                     />
                 <TextView
                     android:id="@+id/title"
@@ -46,7 +48,7 @@
                     app:layout_constraintEnd_toStartOf="@id/btn_ready"
                     android:textColor="@color/black"
                     android:textStyle="normal"
-                    android:textSize="24sp"
+                    android:textSize="25sp"
                     />
 
                 <ImageButton
@@ -55,7 +57,6 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginRight="16dp"
                     android:background="@drawable/ic_btn_ready"
                     app:layout_constraintRight_toRightOf="parent"
                     />
@@ -101,7 +102,9 @@
             android:textSize="18sp"
             android:textStyle="normal"
             android:text="@={vm.n}"
-            android:backgroundTint="@color/black" />
+            android:backgroundTint="@color/black"
+            android:singleLine="true"
+            android:maxLength="30"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

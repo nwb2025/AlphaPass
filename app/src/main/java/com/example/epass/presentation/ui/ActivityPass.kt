@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import com.example.epass.R
 import com.example.epass.databinding.ActivePassBinding
 import com.example.epass.databinding.ActivityMainBinding
 
@@ -30,6 +32,11 @@ class ActivityPass : AppCompatActivity() {
         binding.editPassButton.setOnClickListener( View.OnClickListener {
             val intent = Intent(this@ActivityPass, EditActivity::class.java)
             startActivity(intent)
+        })
+
+        binding.phoneImage.setOnClickListener(View.OnClickListener {
+            binding.phoneImage.setImageDrawable(ContextCompat.getDrawable(this@ActivityPass, R.drawable.ic_success))
+            binding.turnYourPhone.text = "Сканирование прошло успешно"
         })
 
 

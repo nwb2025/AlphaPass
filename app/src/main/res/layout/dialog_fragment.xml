@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/delete_pass_fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="184dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/rounded_corners_dialog">
+
+        <TextView
+            android:id="@+id/delete_question"
+            android:layout_width="280dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="64dp"
+            android:text="@string/do_you_want_to_delete"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/submit_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="58dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="#0000"
+            android:text="@string/yes"
+            android:textAlignment="viewStart"
+            android:textColor="@color/pale_blue"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="70dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="10dp"
+            android:background="#0000"
+            android:text="@string/no"
+            android:textAlignment="viewStart"
+            android:textColor="@color/pale_blue"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/submit_button"
+            app:layout_constraintEnd_toStartOf="@+id/submit_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

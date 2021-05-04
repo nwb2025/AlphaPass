@@ -66,7 +66,8 @@ class MainActivity : AppCompatActivity() {
         })
 
         binding.btnSettings.setOnClickListener(View.OnClickListener {
-
+            val intent = Intent(applicationContext, ActivitySettings::class.java)
+            startActivity(intent)
         })
 
         /*binding.topBar.setOnMenuItemClickListener{

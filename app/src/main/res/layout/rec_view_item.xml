@@ -5,14 +5,12 @@
 <androidx.cardview.widget.CardView
     android:id="@+id/cardview"
     android:layout_width="match_parent"
-    android:layout_height="170dp"
-
+    android:layout_height="208dp"
     app:cardElevation="10dp"
     app:cardCornerRadius="15dp"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
-    android:layout_marginTop="7dp"
-    android:layout_marginBottom="7dp">
+    android:layout_marginTop="25dp">
 
     <View
         android:id="@+id/color"
@@ -35,11 +33,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:singleLine="true"
+            android:maxLength="30"
             android:layout_marginTop="52dp" />
         <ImageView
             android:id="@+id/nfc_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="22dp"
+            android:layout_height="26dp"
             android:src="@drawable/ic_nfc"
             android:layout_marginLeft="30dp"
             app:layout_constraintStart_toStartOf="parent"

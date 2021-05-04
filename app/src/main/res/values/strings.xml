@@ -17,4 +17,10 @@
     <string name="enter_title">Введите название</string>
     <string name="name_of_card">Название</string>
     <string name="edit_title">Редактировать</string>
+    <string name="settings_">Настройки</string>
+    <string name="light_theme">Светлая</string>
+    <string name="dark_theme">Темная</string>
+    <string name="russian_lan">Русский</string>
+    <string name="english_lan">English</string>
+    <string name="nfc_read">Поместите пропуск как можно ближе к nfc чипу вашего смартфона</string>
 </resources>

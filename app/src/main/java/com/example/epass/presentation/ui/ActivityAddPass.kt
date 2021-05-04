@@ -17,6 +17,9 @@ import com.example.epass.interactors.InsertPass
 import com.example.epass.presentation.adapters.MyRecAdapter
 import com.example.epass.presentation.viewmodels.AddViewModel
 import com.example.epass.presentation.viewmodels.ViewModelFactory
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class ActivityAddPass : AppCompatActivity() {
     private lateinit var binding : ActivityNewPassBinding
@@ -30,6 +33,11 @@ class ActivityAddPass : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val dialog = BottomSheetDialog()
+        showProgress(dialog)
+
+
 
         db = AppDataBase.getAppDB(this@ActivityAddPass)
         dao = db?.passDao()
@@ -62,5 +70,8 @@ class ActivityAddPass : AppCompatActivity() {
             Log.i("name", it.toString())
         })
 
+    }
+    fun showProgress(dialog: BottomSheetDialog) = runBlocking {
+        dialog.show(supportFragmentManager,"nfc reading")
     }
 }
